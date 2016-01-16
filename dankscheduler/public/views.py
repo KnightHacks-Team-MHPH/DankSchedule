@@ -1,19 +1,10 @@
 # -*- coding: utf-8 -*-
 """Public section, including homepage and signup."""
 from flask import Blueprint, flash, redirect, render_template, request, url_for
-from flask_login import login_required, login_user, logout_user
 
-from dankscheduler.extensions import login_manager
-from dankscheduler.public.forms import LoginForm
+from dankscheduler.public.forms import ContactForm
 from dankscheduler.utils import flash_errors
-
 blueprint = Blueprint('public', __name__, static_folder='../static')
-
-
-@login_manager.user_loader
-def load_user(user_id):
-    """Load user by ID."""
-    return User.get_by_id(int(user_id))
 
 
 @blueprint.route('/')
@@ -26,3 +17,15 @@ def home():
 def about():
     """About page."""
     return render_template('public/about.html')
+
+
+@blueprint.route('/contact/', methods=['GET', 'POST'])
+def contact():
+    """Contact page."""
+    form = ContactForm()
+    
+    if request.method == 'POST':
+        return 'Form posted.'
+        
+    elif request.method == 'GET':
+        return render_template('public/contact.html', form=form)

@@ -12,6 +12,27 @@ body {
   padding-top: 60px;
 }
 
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-nav{
+  font-size: 16px;
+}
+
+.jumbotron {
+    background-color:#58595b;
+}
+
+.jumbotron h1, .jumbotron p {
+  color: #fff;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px 20px
+}
+
 section {
   overflow: auto;
 }
@@ -26,26 +47,53 @@ textarea {
 }
 
 /* Forms */
+/* buttons */
+.btn-primary {
+    color: #fff;
+    background-color: #cc9900;
+    border-color: #58595b;
+}
 
-.navbar-form input[type="text"],
-.navbar-form input[type="password"] {
-  width: 180px;
+.btn-primary:hover {
+  background-color: #d8b23f;
+  border-color: #000;
+  
 }
 
 
-.form-register {
+/* Contact form */
+form label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding: 5px 0;
+}
+ 
+form input, form textarea, form select {
+  font-size:16px;
+  background-color:#58595b;
+  color: #fff;
+}
+
+form input, textarea {
   width: 50%;
 }
 
-.form-register .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+form textarea {
+  height:200px;
 }
+
+form #submit {
+   background-color: #cc9900;
+   border-color: #58595b;
+  padding: 10px 20px
+}
+
+form #submit:hover {
+  background-color: #d8b23f;
+  border-color: #000;
+}
+
 
 /* footer */
 
