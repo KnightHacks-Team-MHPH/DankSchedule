@@ -4,8 +4,6 @@ from flask_wtf import Form
 from wtforms import PasswordField, StringField
 from wtforms.validators import DataRequired
 
-from dankscheduler.user.models import User
-
 
 class LoginForm(Form):
     """Login form."""
