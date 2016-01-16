@@ -12,7 +12,6 @@ from flask_script.commands import Clean, ShowUrls
 from dankscheduler.app import create_app
 from dankscheduler.database import db
 from dankscheduler.settings import DevConfig, ProdConfig
-from dankscheduler.user.models import User
 
 CONFIG = ProdConfig if os.environ.get('DANKSCHEDULER_ENV') == 'prod' else DevConfig
 HERE = os.path.abspath(os.path.dirname(__file__))
