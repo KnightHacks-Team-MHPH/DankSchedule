@@ -9,13 +9,6 @@ from dankscheduler.utils import flash_errors
 
 blueprint = Blueprint('public', __name__, static_folder='../static')
 
-
-@login_manager.user_loader
-def load_user(user_id):
-    """Load user by ID."""
-    return User.get_by_id(int(user_id))
-
-
 @blueprint.route('/')
 def home():
     """Home page."""

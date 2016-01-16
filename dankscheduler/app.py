@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 
 from dankscheduler import public
+from dankscheduler import scheduler
 from dankscheduler.assets import assets
 from dankscheduler.extensions import bcrypt, cache, db, debug_toolbar, login_manager, migrate
 from dankscheduler.settings import ProdConfig
@@ -36,6 +37,7 @@ def register_extensions(app):
 def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(public.views.blueprint)
+    app.register_blueprint(scheduler.views.blueprint)
     return None
 
 
